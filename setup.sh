@@ -5,7 +5,7 @@ function install {
   sudo apt-get install -q -y @
 }
 
-for i in `cat install.list`
+for i in `cat .bashrc | grep -v "\#" | grep .`
 do
   install $i
 done
