@@ -1,0 +1,28 @@
+# primary simplistic server
+CherryPy
+# easy json encoder/decoder
+simplejson
+# python 2 and 3 compatibility utilities
+six
+# hardware monitor tools
+iotop
+# bandwidth monitoring tools
+python-nmap
+netifaces
+# scientific python
+scipy
+# mathematical model libraries
+numpy
+# http request handlers
+urllib3
+requests
+pycurl
+# web scrapers
+BeautifulSoup
+beautifulsoup4
+# security
+pycrypto
+rsa
+# database
+SQLAlchemy
+pymongo
