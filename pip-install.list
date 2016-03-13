@@ -26,3 +26,9 @@ rsa
 # database
 SQLAlchemy
 pymongo
+upsert
+data_logger
+# gpio pin control
+wiringpi
+# raspberry pi sensors
+sensor
