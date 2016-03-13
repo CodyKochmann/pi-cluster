@@ -5,7 +5,11 @@ function install {
   sudo apt-get install -q -y @
 }
 
-for i in `cat .bashrc | grep -v "\#" | grep .`
+function loadlist {
+  cat $1 | grep -v "\#" | grep .
+}
+
+for i in `loadlist install.list`
 do
   install $i
 done
