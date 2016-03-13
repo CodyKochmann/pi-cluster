@@ -1,0 +1,8 @@
+# uncomplicated firewall
+ufw
+# python package manager
+python-pip
+# ssh manager
+openssh-server
+# vpn manager
+openvpn
