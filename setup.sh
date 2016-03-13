@@ -21,6 +21,6 @@ function runinstallation { # 1=function_name 2=listname
 }
 
 # install the main list
-runinstallation install.list install
+runinstallation install install.list
 # install pip's install list
 runinstallation pipinstall pip-install.list
