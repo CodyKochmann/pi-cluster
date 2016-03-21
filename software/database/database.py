@@ -2,7 +2,7 @@
 # @Author: CodyKochmann
 # @Date:   2016-03-21 14:15:22
 # @Last Modified by:   CodyKochmann
-# @Last Modified time: 2016-03-21 14:18:04
+# @Last Modified time: 2016-03-21 14:19:27
 
 # this is the primary control for the database 
 # that will be used in the raspberry pi cluster
@@ -16,4 +16,6 @@
 # along with a backup of each database on its 
 # siblings in order to promise maximum redundancy
 
-
+# All applications will be evenly distributed
+# throughout the databases and will be seperated 
+# by the tables they require
