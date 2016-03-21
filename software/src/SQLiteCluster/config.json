@@ -1,5 +1,1 @@
-{
-    "dbs_per_pi":4,
-    "pi_count":4,
-    "last_used_db":0
-}
+{"pi_count": 4, "last_db": 12, "dbs_per_pi": 4}
