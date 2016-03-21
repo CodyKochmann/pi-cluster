@@ -4,7 +4,10 @@ import read_file
 
 def file_exists(file_path):
     from os import path
-    if(path.isfile(fname)):
-        if(len(read_file(file_path))>0):
-            return(True)
+    try:
+        if(path.isfile(fname)):
+            if(len(read_file(file_path))>0):
+                return(True)
+    except:
+        pass
     return(False)
