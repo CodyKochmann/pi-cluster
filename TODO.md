@@ -19,4 +19,4 @@ for storage
 
 table layout
 
-id | timestamp | json_data
+autoid | timestamp | json_data
