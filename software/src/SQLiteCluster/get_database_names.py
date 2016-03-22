@@ -6,5 +6,5 @@ def get_database_names():
     output=[]
     hostname=get_host_name()
     for i in range(load_config("dbs_per_pi")):
-        output.append("db/%s.%s.db"%(hostname,(i+1)))
+        output.append("%s.%s.db"%(hostname,(i+1)))
     return(output)
