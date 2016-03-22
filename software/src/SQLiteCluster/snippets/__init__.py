@@ -10,3 +10,4 @@ from valid_insert_query        import *
 from contains_only_whitelisted import *
 from remove_duplicates         import *
 from run_query                 import *
+from current_dir               import *
