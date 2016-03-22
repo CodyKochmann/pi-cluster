@@ -2,7 +2,7 @@
 # @Author: CodyKochmann
 # @Date:   2016-03-22 14:58:26
 # @Last Modified 2016-03-22
-# @Last Modified time: 2016-03-22 15:00:24
+# @Last Modified time: 2016-03-22 15:37:26
 """
 
 # this is the model were basing the REST design off of
@@ -56,3 +56,48 @@ if __name__ == '__main__':
     webapp.generator = StringGeneratorWebService()
     cherrypy.quickstart(webapp, '/', conf)
 """
+
+"""
+explaination of each
+
+- GET to get the resource
+- PUT to update
+- POST to Insert
+- DELETE to delete
+
+for now, we will only use GET and POST
+"""
+ 
+import cherrypy
+import SQLiteCluster
+
+class ClusterDB(object):
+    exposed = True
+    @cherrypy.tools.accept(media='text/plain')
+
+    # this is how data is requested
+    def GET(self,query):
+        return(SQLiteCluster.select(query))
+
+    # this is how data is inserted
+    # db_name needs to be like pi-1.2.db
+    def POST(self,db_name,query):
+        # filter requests to only this server
+        if db_name in SQLiteCluster.get_database_names(): 
+            return(SQLiteCluster.insert(db_name,query))
+
+def main():
+    conf={
+        'server.socket_host': '0.0.0.0',
+        'server.socket_port': 7777,
+        '/': {
+            'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
+            'tools.response_headers.on': True,
+            'tools.response_headers.headers': [('Content-Type', 'text/plain')]
+        }
+    }
+    clusterapp = ClusterDB()
+    cherrypy.quickstart(clusterapp, '/', conf)
+
+if __name__ == '__main__':
+    main()
