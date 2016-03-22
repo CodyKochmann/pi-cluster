@@ -2,7 +2,7 @@
 # @Author: CodyKochmann
 # @Date:   2016-03-22 14:58:26
 # @Last Modified 2016-03-22
-# @Last Modified time: 2016-03-22 15:49:02
+# @Last Modified time: 2016-03-22 15:51:33
 """
 
 # this is the model were basing the REST design off of
@@ -110,3 +110,11 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+"""
+
+check this out for the way links will be set up 
+
+- http://docs.cherrypy.org/en/latest/advanced.html#restful-style-dispatching
+
+"""
