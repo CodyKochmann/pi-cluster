@@ -2,7 +2,7 @@
 # @Author: CodyKochmann
 # @Date:   2016-03-22 14:58:26
 # @Last Modified 2016-03-22
-# @Last Modified time: 2016-03-22 15:37:26
+# @Last Modified time: 2016-03-22 15:49:02
 """
 
 # this is the model were basing the REST design off of
@@ -77,8 +77,17 @@ class ClusterDB(object):
 
     # this is how data is requested
     def GET(self,query):
-        return(SQLiteCluster.select(query))
+        
+        if SQLiteCluster.snippets.valid_select_query(query):
+            the_future_implementation_of_this="""
+                # sends the query to all pis and returns the output
+                return(multithreaded_select_to_neighboring_pis(query))
+            """
+            return(SQLiteCluster.select(query))
 
+    #======================================================
+    # I would like this to be table specific in the future
+    #======================================================
     # this is how data is inserted
     # db_name needs to be like pi-1.2.db
     def POST(self,db_name,query):
