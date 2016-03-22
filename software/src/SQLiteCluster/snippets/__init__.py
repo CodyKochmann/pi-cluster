@@ -6,5 +6,7 @@ from read_file                 import *
 from create_sqlite_db          import *
 from log                       import *
 from valid_select_query        import *
+from valid_insert_query        import *
 from contains_only_whitelisted import *
 from remove_duplicates         import *
+from run_query                 import *
