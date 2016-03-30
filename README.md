@@ -13,3 +13,19 @@ This is the section where the schematics will be going for how things are being 
 ### The software side 
 
 The design of this cluster is a headless one. I've seen a lot of schematics of "clusters" where there was one load balancer and a ton of servers behind it, this is not one of those. I wanted to create an architecture that offered just as many access points as it added points where things could be processed. I'll include illustrations in how I did that as this project goes on.
+
+---
+
+### Current Overview
+
+##### Software 
+
+| role     | name     |
+|----------|----------|
+| server   | cherrypy |
+| database | couchdb  |
+
+##### Hardware 
+![](https://github.com/CodyKochmann/pi-cluster/raw/master/hardware/pictures/version_0.1.jpg)
+
+
