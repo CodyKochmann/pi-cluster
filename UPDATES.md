@@ -12,3 +12,4 @@
   > Currently, the entire hardware setup is being held together with cardboard. After using a laser thermometer and realizing that the pis don't pass around 110 degrees, cardboard became a good prototyping platform.
 
   > It is though, time for a upgrade. The final model will be made of aluminum but for version 2, wood is the next stepping stone.
+- Found a nice diagram online for the dimensions to the Raspberry Pi 2 model B.
